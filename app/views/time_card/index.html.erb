@@ -30,7 +30,7 @@
 									<label>End</label>
 								</div>
 								<div class="right">
-									<%= text_field_tag "timecard[#{i}][#{j}][end]", ((params.has_key? :timecard)? params[:timecard][i.to_s.to_sym][j.to_s.to_sym][:begin] : "4:00pm"), :size => 6 %>
+									<%= text_field_tag "timecard[#{i}][#{j}][end]", ((params.has_key? :timecard)? params[:timecard][i.to_s.to_sym][j.to_s.to_sym][:end] : "4:00pm"), :size => 6 %>
 								</div>
 							</div>
 						</td>
