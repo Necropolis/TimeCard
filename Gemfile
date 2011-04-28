@@ -5,7 +5,7 @@ gem 'rails', '3.0.7'
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
-gem 'sqlite3'
+# gem 'sqlite3' # actually doesn't even use a database
 
 # Use unicorn as the web server
 # gem 'unicorn'
