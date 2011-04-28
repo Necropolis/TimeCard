@@ -1,3 +1,5 @@
+Gem.clear_paths # fix for DreamHost
+
 require 'rubygems'
 
 # Set up gems listed in the Gemfile.
