@@ -8,7 +8,11 @@ class TimeCardController < ApplicationController
       params[:timecard].values.each do |week|
         week_total = Rational(0/1)
         week.values.each do |day|
-          week_total = week_total + (DateTime.parse(day[:end])-DateTime.parse(day[:begin]))
+          begin
+            week_total = week_total + (DateTime.parse(day[:end])-DateTime.parse(day[:begin]))
+          rescue
+            # do nothing
+          end
         end
         @weekly_totals<<week_total
       end
