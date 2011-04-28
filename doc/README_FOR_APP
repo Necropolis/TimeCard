@@ -10,5 +10,5 @@ So I found a spare hour and a half and wrote up a quick Rails 3 app to do this i
 
 == Dependencies
 
-* >Ruby 1.9.2
-* >Rails 3.0.2
+* >=Ruby 1.9.2
+* >=Rails 3.0.2
