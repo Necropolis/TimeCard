@@ -1,0 +1,56 @@
+<div class="content-block">
+	<%= form_tag("/",:method=>:post) do %>
+		<table class="month">
+			<tr>
+				<th>Monday</th>
+				<th>Tuesday</th>
+				<th>Wednesday</th>
+				<th>Thursday</th>
+				<th>Friday</th>
+				<% if @calculated %><th class="no-border no-background" style="width: 125px">Total</th><% end %>
+			</tr>
+			<% 5.times do |i| %>
+				<% if i.even? %>
+					<tr class="even">
+				<% else %>
+					<tr class="odd">
+				<% end %>
+					<% 5.times do |j| %>
+						<td>
+							<div class="begin-container">
+								<div class="left">
+									<label>Begin</label>
+								</div>
+								<div class="right">
+									<%= text_field_tag "timecard[#{i}][#{j}][begin]", ((params.has_key? :timecard)? params[:timecard][i.to_s.to_sym][j.to_s.to_sym][:begin] : "8:00am"), :size => 6 %>
+								</div>
+							</div>
+							<div class="end-container">
+								<div class="left">
+									<label>End</label>
+								</div>
+								<div class="right">
+									<%= text_field_tag "timecard[#{i}][#{j}][end]", ((params.has_key? :timecard)? params[:timecard][i.to_s.to_sym][j.to_s.to_sym][:begin] : "4:00pm"), :size => 6 %>
+								</div>
+							</div>
+						</td>
+					<% end %>
+					<% if @calculated %><td class="no-border ta-center no-background"><%= @weekly_totals[i].to_f*24 %> hrs</td><% end %>
+				</tr>
+			<% end %>
+			<% if @calculated %>
+				<tr>
+					<% 5.times do %>
+						<td style="visibility: hidden"></td>
+					<% end %>
+					<td class="no-border ta-center no-background"><%= @month_total.to_f*24 %> hrs</td>
+				</tr>
+			<% end %>
+		</table>
+		<br/>
+		<div class="submit-button"><%= submit_tag 'Calculate!' %></div>
+	<% end %>
+	<div class="legal">
+		<em>&copy; <%= DateTime.now.year %> by <a href="http://chrismiller.at">Chris Miller</a>. This is licensed under the <a href="http://fsdev.net/">Firestorm Development Group</a> <a href="http://fsdev.net/fdosl">FDOSL</a>. Please use this timecard hours calculator for good and not evil! The original code is available on <a href="https://github.com/fsdev-cmiller/TimeCard">Github</a> - forks and pull requests are welcome!</em>
+	</div>
+</div>

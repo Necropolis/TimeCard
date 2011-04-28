@@ -1,0 +1,63 @@
+table.month {
+	border-collapse: collapse;
+}
+
+table.month tr.odd {
+	background: #e6e6e6;
+}
+
+table.month tr th {
+	background: gray;
+	border-style: solid;
+	border-color: black;
+	border-width: 1px;
+	width: 150px;
+	text-align: center;
+}
+
+table.month tr td {
+	border-style: dotted;
+	border-color: gray;
+	border-width: 1px;
+}
+
+table.month tr .ta-right {
+	text-align: right;
+}
+
+table.month tr .ta-center {
+	text-align: center;
+}
+
+table.month tr .no-border {
+	border-style: none;
+	border-width: 0px;
+}
+
+table.month tr .no-background {
+	background: white;
+}
+
+div.begin-container,
+div.end-container {
+	margin: 6px;
+}
+
+div.left {
+	display: inline;
+	right: 12px;
+}
+
+div.right {
+	float: right;
+}
+
+div.content-block {
+	width: 950px;
+	margin: auto;
+}
+
+div.submit-button {
+	width: 50%;
+	margin: auto;
+}
