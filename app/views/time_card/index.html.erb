@@ -39,11 +39,13 @@
 				</tr>
 			<% end %>
 			<% if @calculated %>
-				<tr>
-					<% 5.times do %>
+				<tr height="40px">
+					<% 3.times do %>
 						<td style="visibility: hidden"></td>
 					<% end %>
-					<td class="no-border ta-center no-background"><%= @month_total.to_f*24 %> hrs</td>
+					<td style="visibility: hidden" class="no-border"></td>
+					<td class="no-border ta-center ta-middle"><label>Total:</label></td>
+					<td class="no-border ta-center no-background ta-middle"><%= @month_total.to_f*24 %> hrs</td>
 				</tr>
 			<% end %>
 		</table>
