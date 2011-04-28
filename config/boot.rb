@@ -1,6 +1,5 @@
-Gem.clear_paths # fix for DreamHost
-
 require 'rubygems'
+Gem.clear_paths # fix for DreamHost
 
 # Set up gems listed in the Gemfile.
 ENV['BUNDLE_GEMFILE'] ||= File.expand_path('../../Gemfile', __FILE__)
