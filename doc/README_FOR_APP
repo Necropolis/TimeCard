@@ -1,2 +1,14 @@
-Use this README file to introduce your application and point to useful places in the API for learning more.
-Run "rake doc:app" to generate API documentation for your models, controllers, helpers, and libraries.
+Simple time sheet calculator.
+
+== Use Case
+
+So, you have this boss and this boss has you fill out a physical piece of paper for a monthly time sheet. You have two choices: write down the number of hours worked each day, or the time you started work and the time you stopped work each day.
+
+I have chosen the latter, but this left me totaling my hours by hand each month. I, being the lazy programmer I am, would just fire up an `IRB` interpreter and then total them using `DateTime.parse`, however this isn't very nice and easy to do, and it's prone to typing errors.
+
+So I found a spare hour and a half and wrote up a quick Rails 3 app to do this in a much more user-friendly way. And by 'user-friendly,' I really mean 'me-friendly.' It's brutally simple, but it works.
+
+== Dependencies
+
+* >Ruby 1.9.2
+* >Rails 3.0.2
